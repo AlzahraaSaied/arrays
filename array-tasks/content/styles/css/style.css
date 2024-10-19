@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    
+}
+
+.w-600 {
+    width: 27rem;
+}
+.table-style {
+    box-shadow: 0px 4px 12px 0px #24145226;
+    border: 1px solid #eaf1f3;
+    border-radius: 8px !important;
+    width: 52.563rem; 
+}
+table {
+    border-radius: 8px !important;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    width: 100%;
+    color: #102C38;
+}
+.th-color{
+    color: #102C3880 !important;
+    font-weight: 400 !important; 
+}
+table tr:last-child td {
+    border-bottom: none; 
+}
+
+input[type=checkbox]{
+    width: 18px;
+    height: 18px;
+    color: #102C3880;    
+}
+.mx-input{
+    margin: 1.094rem 3.863rem ;
+}
+

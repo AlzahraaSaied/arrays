@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="content/styles/bootstrap-5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/styles/css/style.css">
+</head>
+
+<body>
+
+
+    <div class="mt-3 mx-5">
+        <div class="results">
+            <div class="w-600">
+                <label for="inputValue">Enter a value:</label>
+                <input type="text" name="inputValue" id="inputValue">
+                <button onclick="addValue()" class="rounded px-2 mx-1">Add</button>
+                <button onclick="displayValue()" id="btn-display" class="rounded px-2">Display</button>
+
+                <div class="border-bottom border-2 mt-4 "></div>
+            </div>
+
+
+
+            <div id="outputValue" class="mt-2"></div>
+        </div>
+
+        <div class="sum mt-5">
+            <label for="array1">Enter values for Array 1:</label>
+            <input type="text" id="array1" placeholder="e.g. 1,0,2,3,4">
+
+            <br><br>
+            <label for="array2">Enter values for Array 2:</label>
+            <input type="text" id="array2" placeholder="e.g. 3,5,6,7,8,13">
+            <br><br>
+
+            <button onclick="arraysSum()" class="rounded px-2" id="btn-ds">Calculate Sum</button>
+
+            <p class="mt-3">Expected Output Array</p>
+            <div id="output"></div>
+        </div>
+
+
+        <div class="table-style mb-3 mt-5">
+            <table class="table table-striped align-middle mt-2 mb-1">
+                <thead>
+                    <tr>
+                        <th scope="col" ></th>
+                        <th scope="col" class="py-2 th-color">Name</th>
+                        <th scope="col" class="py-2 th-color">Company</th>
+                        <th scope="col" class="py-2 th-color px-5">User</th>
+                        <th scope="col" class="py-2 th-color px-5">Cart</th>
+                        <th scope="col" class="py-2 th-color px-4"></th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="mx-input"></td>
+                        <td class="edited mx-input" data-type="text" data-value="Bessie Cooper">Bessie Cooper</td>
+                        <td class="edited mx-input" data-type="text" data-value="IBM">IBM</td>
+                        <td class=" px-5"><img src="./content/images/girl-user.webp" alt="User"></td>
+                        <td class="edited px-5 " data-type="number" data-value="453">453 €</td>
+                        <td class=" px-4"><button class="btn  btn-edit border-0">
+                                <img src="./content/images/edit.png" alt="the edit icon image">
+                            </button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="mx-input"></td>
+                        <td class="edited mx-input" data-type="text" data-value="Wade Warren">Wade Warren</td>
+                        <td class="edited mx-input" data-type="text" data-value="L'Oréal">L'Oréal</td>
+                        <td class="px-5"><img src="./content/images/Avatars.webp" alt="User"></td>
+                        <td class="edited px-5" data-type="number" data-value="994">994 €</td>
+                        <td class="px-4"><button class="btn  btn-edit border-0">
+                                <img src="./content/images/edit.png" alt="the edit icon image">
+                            </button></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" class="mx-input"></td>
+                        <td class="edited mx-input" data-type="text" data-value="Arlene McCoy">Arlene McCoy</td>
+                        <td class="edited mx-input" data-type="text" data-value="Gillette">Gillette</td>
+                        <td class=" px-5"><img src="./content/images/blonde-boy.webp" alt="User"></td>
+                        <td class="edited px-5" data-type="number" data-value="429">429 €</td>
+                        <td class="px-4"><button class="btn  btn-edit border-0">
+                                <img src="./content/images/edit.png" alt="the edit icon image">
+                            </button></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" class="mx-input"></td>
+                        <td class="edited mx-input" data-type="text" data-value="Jenny Wilson">Jenny Wilson</td>
+                        <td class="edited mx-input" data-type="text" data-value="MasterCard">MasterCard</td>
+                        <td class=" px-5"><img src="./content/images/woman-user.webp" alt="User"></td>
+                        <td class="edited px-5" data-type="number" data-value="826">826 €</td>
+                        <td class="px-4"><button class="btn btn-edit border-0">
+                                <img src="./content/images/edit.png" alt="the edit icon image">
+                            </button></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" class="mx-input"></td>
+                        <td class="edited mx-input" data-type="text" data-value="Kristin Watson">Kristin Watson</td>
+                        <td class="edited mx-input" data-type="text" data-value="Gillette">Gillette</td>
+                        <td class="px-5"><img src="./content/images/blonde-user.webp" alt="User"></td>
+                        <td class="edited px-5" data-type="number" data-value="561">561 €</td>
+                        <td class="px-4"><button class="btn btn-edit border-0">
+                                <img src="./content/images/edit.png" alt="the edit icon image">
+                            </button></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="checkbox" class="mx-input"></td>
+                        <td class="edited mx-input" data-type="text" data-value="Cameron Williamson">Cameron Williamson</td>
+                        <td class="edited mx-input" data-type="text" data-value="Louis Vuitton">Louis Vuitton</td>
+                        <td class="px-5"><img src="./content/images/black-woman.webp" alt="User"></td>
+                        <td class="edited px-5" data-type="number" data-value="540">540 €</td>
+                        <td class=" px-4"><button class="btn btn-edit border-0">
+                                <img src="./content/images/edit.png" alt="the edit icon image">
+                            </button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+
+
+    </div>
+    <script src="./content/styles/bootstrap-5.3.3/dist/js/bundle.min.js"></script>
+    <script src="./content/js/script.js"></script>
+</body>
+
+</html>
